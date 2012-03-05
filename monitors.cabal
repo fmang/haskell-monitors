@@ -1,0 +1,12 @@
+Name:    monitors
+Version: 1.0
+
+Author:     Frédéric Mangano
+Maintainer: Frédéric Mangano <fred.mangano@gmail.com>
+
+Cabal-Version: >= 1.2
+Build-Type:    Simple
+
+Library
+  Build-Depends:   base, bytestring
+  Exposed-Modules: System.Monitor.Cpu
