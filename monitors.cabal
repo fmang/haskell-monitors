@@ -9,4 +9,4 @@ Build-Type:    Simple
 
 Library
   Build-Depends:   base, bytestring
-  Exposed-Modules: System.Monitor.Cpu
+  Exposed-Modules: System.Monitor.Cpu, System.Monitor.Mem
