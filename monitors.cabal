@@ -8,5 +8,8 @@ Cabal-Version: >= 1.2
 Build-Type:    Simple
 
 Library
-  Build-Depends:   base, bytestring
-  Exposed-Modules: System.Monitor.Cpu, System.Monitor.Memory
+  Build-Depends: base, bytestring, directory
+  Exposed-Modules:
+    System.Monitor.Cpu,
+    System.Monitor.Memory,
+    System.Monitor.Temperature
