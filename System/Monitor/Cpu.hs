@@ -15,7 +15,7 @@ data Status = Status
 
 parse :: B.ByteString -> Status
 parse = f . mapMaybe (fmap fst . B.readInt) . B.words . B.takeWhile (/= '\n')
-  where f (_:us:n:sys:idl:io:_) = Status us n sys idl io
+  where f (us:n:sys:idl:io:_) = Status us n sys idl io
         f _ = error "invalid /proc/stat"
 
 -- | Read @\/proc\/stat@.
