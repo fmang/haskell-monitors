@@ -7,6 +7,7 @@ module System.Monitor.Cpu
       getStatus
     ) where
 
+import Control.Exception (evaluate)
 import Data.Maybe (mapMaybe)
 import qualified Data.ByteString.Lazy.Char8 as B
 
@@ -37,4 +38,4 @@ parse = f . mapMaybe (fmap fst . B.readInt) . B.words . B.takeWhile (/= '\n')
 
 -- | Read @\/proc\/stat@.
 getStatus :: IO Status
-getStatus = parse `fmap` B.readFile "/proc/stat"
+getStatus = parse `fmap` B.readFile "/proc/stat" >>= evaluate
