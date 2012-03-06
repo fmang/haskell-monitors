@@ -12,4 +12,5 @@ Library
   Exposed-Modules:
     System.Monitor.Cpu,
     System.Monitor.Memory,
+    System.Monitor.Network,
     System.Monitor.Temperature
