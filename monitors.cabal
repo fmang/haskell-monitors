@@ -14,3 +14,4 @@ Library
     System.Monitor.Memory,
     System.Monitor.Network,
     System.Monitor.Temperature
+  Other-Modules: System.Monitor.Internal
